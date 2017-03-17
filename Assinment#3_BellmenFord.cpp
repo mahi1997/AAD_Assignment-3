@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstdio>
+#include <limits.h>
 #include <ctime>
 #include <stdlib.h>   
 using namespace std;
-#define INFINITY 9999999999
+
 
 
 
@@ -33,7 +34,7 @@ class Edge{
 			travelfrom[source]=-1; //null
 	       for(int i=0;i<Vertex;i++){
 	       	if(i!=source)
-		    distance[i]=INFINITY;
+		    distance[i]=INT_MAX;
 		    
 			}
 		}
