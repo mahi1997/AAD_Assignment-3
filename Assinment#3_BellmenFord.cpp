@@ -106,7 +106,7 @@ class Edge{
 
 int main(){
 	int E,V,check;
-	cout<<"Enter \n1. Check time graph sparse graph where |E|=|V|\n2.Check time graph dense graph where |E|=|V|*|V|\n3. for well known graph"<<endl;
+	cout<<"Enter \n1. Check time graph sparse graph where |E|=|V|\n2.Check time graph dense graph where |E|=O(|V|*|V|)\n3. for well known graph"<<endl;
 	cin>>check;
 	
 	/* To make executiontime graph
@@ -138,12 +138,12 @@ int main(){
 	cout<<"for |V|="<<V<<"  |E|="<<E<<" Time:"<<duration <<" seconds"<<endl;
 	}
 	/* To make executiontime graph
-	where |E|=|V| * |V|
+	where |E|= O(|V| * |V|)
 	in graph 
 	every vertex is connected with each vertex
 	*/
 	if(check==2){
-		cout<<"Enter  number of vertex |V| only as |E|=|V|*|V|"<<endl;
+		cout<<"Enter  number of vertex |V| only as |E|=O(|V|*|V|)"<<endl;
 	    cin>>V;
 	    E=V*V;
 	
@@ -154,7 +154,7 @@ int main(){
 		
 		//select a random cost b/w 1-10
 		int c=rand() % 10 + 1;
-	    
+		if(j!=i)
 	    Elist->Addedge(i,j,c);
 	}
 	}
